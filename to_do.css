@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif; 
+}
+.back{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(150deg, #1F6E8C, #84A7A1);
+    padding: 10px;
+}
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+    color: #84A7A1;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row_num{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 20px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(206, 140, 17);
+    color: rgb(60, 49, 33);
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.check{
+    color: #ae3939;
+    text-decoration: line-through;
+}
+
+ul li.check::before{
+    background-image: url(check.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+    color: brown;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 45px;
+}
+ul li span:hover{
+    background: rgb(81, 115, 115);
+}
